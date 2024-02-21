@@ -1,0 +1,25 @@
+name: Select PR Template
+
+on:
+  pull_request:
+    types: [opened]
+
+jobs:
+  select-template:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+
+      - name: Determine branch name suffix
+        id: branch-suffix
+        run: echo "::set-output name=suffix::${GITHUB_HEAD_REF#*-}"
+
+      - name: Select PR Template
+        run: |
+          if [[ "${{ steps.branch-suffix.outputs.suffix }}" == "feature" ]]; then
+            cp .github/feature-branch-template.md .github/PULL_REQUEST_TEMPLATE.md
+          elif [[ "${{ steps.branch-suffix.outputs.suffix }}" == "hotfix" ]]; then
+            cp .github/hotfix-branch-template.md .github/PULL_REQUEST_TEMPLATE.md
+          fi

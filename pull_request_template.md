@@ -3,7 +3,7 @@
 ## PR Type
 
 - [ ] Feature
-- [ ] Hotfix
+- [ ] Issue
 
 ## Title
 
@@ -44,7 +44,7 @@
 - **What's Next**:
     <!-- Outline next steps or further development needed -->
 
-### For Hotfix PRs
+### For Issue PRs
 
 - **5 Whys**:
     <!-- Include a 5 Whys analysis to identify the root cause -->

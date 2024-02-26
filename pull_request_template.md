@@ -46,8 +46,6 @@
 
 ### For Issue PRs
 
-- **5 Whys**:
-    <!-- Include a 5 Whys analysis to identify the root cause -->
 - **Root Cause Analysis (RCA)**:
     <!-- Provide a detailed RCA -->
 - **Incident Overview**:
